@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B778184293F2BC40089C9E9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B778183293F2BC40089C9E9 /* MainViewController.swift */; };
+		9B778188293F59890089C9E9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B778187293F59890089C9E9 /* DetailViewController.swift */; };
+		9B77818A293F6BBA0089C9E9 /* MusicItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B778189293F6BBA0089C9E9 /* MusicItemModel.swift */; };
 		9BF2059A293E2E3200299604 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF20599293E2E3200299604 /* AppDelegate.swift */; };
 		9BF2059C293E2E3200299604 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF2059B293E2E3200299604 /* SceneDelegate.swift */; };
 		9BF2059E293E2E3200299604 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF2059D293E2E3200299604 /* ViewController.swift */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B778183293F2BC40089C9E9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		9B778187293F59890089C9E9 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		9B778189293F6BBA0089C9E9 /* MusicItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicItemModel.swift; sourceTree = "<group>"; };
 		9BF20596293E2E3200299604 /* MusicSearch_UIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicSearch_UIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BF20599293E2E3200299604 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BF2059B293E2E3200299604 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +69,9 @@
 				9BF205A2293E2E3400299604 /* Assets.xcassets */,
 				9BF205A4293E2E3400299604 /* LaunchScreen.storyboard */,
 				9BF205A7293E2E3400299604 /* Info.plist */,
+				9B778183293F2BC40089C9E9 /* MainViewController.swift */,
+				9B778187293F59890089C9E9 /* DetailViewController.swift */,
+				9B778189293F6BBA0089C9E9 /* MusicItemModel.swift */,
 			);
 			path = MusicSearch_UIKit;
 			sourceTree = "<group>";
@@ -140,6 +149,9 @@
 			files = (
 				9BF2059E293E2E3200299604 /* ViewController.swift in Sources */,
 				9BF2059A293E2E3200299604 /* AppDelegate.swift in Sources */,
+				9B778188293F59890089C9E9 /* DetailViewController.swift in Sources */,
+				9B778184293F2BC40089C9E9 /* MainViewController.swift in Sources */,
+				9B77818A293F6BBA0089C9E9 /* MusicItemModel.swift in Sources */,
 				9BF2059C293E2E3200299604 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
