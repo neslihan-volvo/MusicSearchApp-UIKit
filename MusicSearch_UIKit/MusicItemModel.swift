@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct MusicItemModel: Codable, Identifiable {
+public struct MusicItemModel: Codable, Identifiable, Equatable {
     
     public let id : Int
     public let wrapperType: WrapperType
@@ -31,12 +31,34 @@ public struct MusicItemModel: Codable, Identifiable {
         case previewUrl
     }
 }
-public enum WrapperType: String, Codable {
+public enum WrapperType: String, Equatable, Codable {
     case track
     case collection
     case artist
 }
 
+public enum MusicSearchError: Error {
+    case requestFailed
+    case networkResponseInvalid
+    case jsonDecodeFailed
+    case urlInvalid
+}
+public enum State: Equatable {
+  
+    case idle
+    case loading
+    case loaded ( results : [MusicItemModel])
+    case error
+    
+    var results: [MusicItemModel]? {
+        switch self {
+        case .loaded(results: let result):
+            return result
+        default:
+            return nil
+        }
+    }
+}
 var item1 = MusicItemModel(
     id:123124,
     wrapperType: WrapperType.track,
