@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B6A03B42946309B0013CCF0 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6A03B32946309B0013CCF0 /* ImageDownloader.swift */; };
 		9B778184293F2BC40089C9E9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B778183293F2BC40089C9E9 /* MainViewController.swift */; };
 		9B778188293F59890089C9E9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B778187293F59890089C9E9 /* DetailViewController.swift */; };
 		9B77818A293F6BBA0089C9E9 /* MusicItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B778189293F6BBA0089C9E9 /* MusicItemModel.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B6A03B32946309B0013CCF0 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		9B778183293F2BC40089C9E9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9B778187293F59890089C9E9 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9B778189293F6BBA0089C9E9 /* MusicItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicItemModel.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				9B77E1442940E816005ED9A6 /* ContentViewModel.swift */,
 				9B77E1472940E880005ED9A6 /* Extensions.swift */,
 				9B77E1492940E8B8005ED9A6 /* MusicSearchResponse.swift */,
+				9B6A03B32946309B0013CCF0 /* ImageDownloader.swift */,
 			);
 			path = MusicSearch_UIKit;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				9BF2059E293E2E3200299604 /* ViewController.swift in Sources */,
 				9BF2059A293E2E3200299604 /* AppDelegate.swift in Sources */,
 				9B778188293F59890089C9E9 /* DetailViewController.swift in Sources */,
+				9B6A03B42946309B0013CCF0 /* ImageDownloader.swift in Sources */,
 				9B778184293F2BC40089C9E9 /* MainViewController.swift in Sources */,
 				9B77E1432940E790005ED9A6 /* NetworkClient.swift in Sources */,
 				9B77818A293F6BBA0089C9E9 /* MusicItemModel.swift in Sources */,

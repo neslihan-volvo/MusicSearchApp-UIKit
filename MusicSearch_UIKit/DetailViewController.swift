@@ -1,29 +1,65 @@
-//
-//  DetailViewController.swift
-//  MusicSearch_UIKit
-//
-//  Created by Neslihan Doğan Aydemir on 2022-12-06.
-//
-
 import UIKit
+import AVKit
 
 class DetailViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    @IBOutlet weak var musicImage: UIImageView!
+    @IBOutlet weak var artistName: UILabel!
+    @IBOutlet weak var trackName: UILabel!
+    @IBOutlet weak var collectionName: UILabel!
+    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var imageOuterView: UIView!
+    
+    private let musicPlayer = AVPlayer()
+    private let imageDownloader = ImageDownloader()
+    
+    var musicItem: MusicItemModel? {
+        didSet {
+            getMusicITemDetails()
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        playButton.setTitle("Play", for: .normal)
+        musicImage.image = UIImage(named: "sampleImage100")
+        musicImage.applyShadow(containerView:imageOuterView, coefficient: 0.3)
+        
+        getMusicITemDetails()
+        // Do any additional setup after loading the view.
     }
-    */
-
+    func getMusicITemDetails() {
+        if let musicItem = musicItem,
+           let artistName = artistName,
+           let trackName = trackName,
+           let collectionName = collectionName {
+            Task {
+                musicImage.image = await getImage(url: musicItem.artworkUrl60)
+            }
+            artistName.text = musicItem.artistName
+            collectionName.text = musicItem.collectionName
+            trackName.text = musicItem.trackName
+        }
+    }
+    func getImage(url: String) async -> UIImage {
+        var image = UIImage()
+        do {
+            image = try await imageDownloader.getImage(url: url)
+        } catch {
+            print(error)
+        }
+        return image
+    }
+    @IBAction func playMusic(_ sender: UIButton) {
+        if musicPlayer.rate == 1 {
+            musicPlayer.pause()
+            playButton.setTitle("Play", for: .normal)
+        } else {
+            if musicPlayer.currentItem == nil {
+                musicPlayer.replaceCurrentItem(with: AVPlayerItem(url: URL(string: musicItem!.previewUrl)!))
+            }
+            musicPlayer.play()
+            playButton.setTitle("Pause", for: .normal)
+        }
+    }
 }

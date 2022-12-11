@@ -59,6 +59,12 @@ public enum State: Equatable {
         }
     }
 }
+
+public enum ImageDownloaderError: Error {
+    case requestFailed
+    case networkResponseInvalid
+    case imageInitializationFailed
+}
 var item1 = MusicItemModel(
     id:123124,
     wrapperType: WrapperType.track,
