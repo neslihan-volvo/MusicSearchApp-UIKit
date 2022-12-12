@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MusicItemIdentifier" id="gT1-wm-U01">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MusicItemIdentifier" id="gT1-wm-U01" customClass="MusicCell" customModule="MusicSearch_UIKit" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="390" height="33.333332061767578"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gT1-wm-U01" id="xeq-0A-o9F">
@@ -69,6 +69,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="artistName" destination="eqW-Mv-Hwp" id="DLe-tW-lHC"/>
+                                    <outlet property="musicImage" destination="M0Z-F1-twY" id="6sS-Py-aNa"/>
+                                    <outlet property="trackName" destination="oQE-Yy-Ppl" id="tgF-mD-7O7"/>
                                     <segue destination="yMG-53-7dC" kind="show" identifier="SegueForMusicDetails" id="qNH-LM-UY3"/>
                                 </connections>
                             </tableViewCell>

@@ -63,24 +63,34 @@ class MainViewController: UITableViewController {
         return 60
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MusicItemIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MusicItemIdentifier", for: indexPath) as! MusicCell
         guard let musicItem = viewModel.state.results?[indexPath.row] else {
             fatalError("Oh no should not happen")
         }
+        /*
         let trackLabel = cell.viewWithTag(1000) as! UILabel
         trackLabel.text = musicItem.trackName
         let artistLabel = cell.viewWithTag(1001) as! UILabel
         artistLabel.text = musicItem.artistName
         let image = cell.viewWithTag(2001) as! UIImageView
         let outerView = cell.viewWithTag(2000)!
+        
         image.adjustsImageSizeForAccessibilityContentSizeCategory = true
         image.applyShadow(containerView: outerView,coefficient: 0.3)
         Task {
             image.image = await getImage(url: musicItem.artworkUrl60)
         }
+        */
+        cell.artistName.text = musicItem.artistName
         
         return cell
     }
+}
+class MusicCell: UITableViewCell {
+    
+    @IBOutlet weak var musicImage: UIImageView!
+    @IBOutlet weak var artistName: UILabel!
+    @IBOutlet weak var trackName: UILabel!
 }
 extension MainViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
