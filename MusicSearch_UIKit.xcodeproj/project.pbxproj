@@ -53,11 +53,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9B77E1462940E874005ED9A6 /* New Group */ = {
+		9B6A03B529471FC70013CCF0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9B778183293F2BC40089C9E9 /* MainViewController.swift */,
+				9B778187293F59890089C9E9 /* DetailViewController.swift */,
 			);
-			path = "New Group";
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9B6A03B629471FDC0013CCF0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9B77E1492940E8B8005ED9A6 /* MusicSearchResponse.swift */,
+				9B778189293F6BBA0089C9E9 /* MusicItemModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9B6A03B7294720110013CCF0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9B77E1442940E816005ED9A6 /* ContentViewModel.swift */,
+				9B6A03B32946309B0013CCF0 /* ImageDownloader.swift */,
+				9B77E1422940E790005ED9A6 /* NetworkClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		9B77E1462940E874005ED9A6 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9B77E1472940E880005ED9A6 /* Extensions.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		9BF2058D293E2E3200299604 = {
@@ -79,7 +108,10 @@
 		9BF20598293E2E3200299604 /* MusicSearch_UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				9B77E1462940E874005ED9A6 /* New Group */,
+				9B6A03B7294720110013CCF0 /* Network */,
+				9B6A03B629471FDC0013CCF0 /* Models */,
+				9B6A03B529471FC70013CCF0 /* Controller */,
+				9B77E1462940E874005ED9A6 /* Extension */,
 				9BF20599293E2E3200299604 /* AppDelegate.swift */,
 				9BF2059B293E2E3200299604 /* SceneDelegate.swift */,
 				9BF2059D293E2E3200299604 /* ViewController.swift */,
@@ -87,14 +119,6 @@
 				9BF205A2293E2E3400299604 /* Assets.xcassets */,
 				9BF205A4293E2E3400299604 /* LaunchScreen.storyboard */,
 				9BF205A7293E2E3400299604 /* Info.plist */,
-				9B778183293F2BC40089C9E9 /* MainViewController.swift */,
-				9B778187293F59890089C9E9 /* DetailViewController.swift */,
-				9B778189293F6BBA0089C9E9 /* MusicItemModel.swift */,
-				9B77E1422940E790005ED9A6 /* NetworkClient.swift */,
-				9B77E1442940E816005ED9A6 /* ContentViewModel.swift */,
-				9B77E1472940E880005ED9A6 /* Extensions.swift */,
-				9B77E1492940E8B8005ED9A6 /* MusicSearchResponse.swift */,
-				9B6A03B32946309B0013CCF0 /* ImageDownloader.swift */,
 			);
 			path = MusicSearch_UIKit;
 			sourceTree = "<group>";

@@ -74,7 +74,7 @@ class MainViewController: UITableViewController {
         let image = cell.viewWithTag(2001) as! UIImageView
         let outerView = cell.viewWithTag(2000)!
         image.adjustsImageSizeForAccessibilityContentSizeCategory = true
-        image.applyShadow(containerView: outerView,coefficient: 0.5)
+        image.applyShadow(containerView: outerView,coefficient: 0.3)
         Task {
             image.image = await getImage(url: musicItem.artworkUrl60)
         }
