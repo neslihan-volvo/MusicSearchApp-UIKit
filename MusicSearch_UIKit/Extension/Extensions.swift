@@ -21,8 +21,11 @@ extension UIImageView {
         containerView.layer.shadowRadius = 5
         containerView.layer.cornerRadius = cornerRadius
         containerView.layer.shadowPath = UIBezierPath(roundedRect: containerView.bounds, cornerRadius: cornerRadius).cgPath
+        self.adjustsImageSizeForAccessibilityContentSizeCategory = true
         self.clipsToBounds = true
         self.layer.cornerRadius = cornerRadius
         self.contentMode = .scaleToFill
     }
+    
 }
+

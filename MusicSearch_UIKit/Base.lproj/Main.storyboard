@@ -24,8 +24,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="359.66666666666669" height="33.333332061767578"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQE-Yy-Ppl">
-                                            <rect key="frame" x="65" y="0.0" width="292" height="20"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQE-Yy-Ppl">
+                                            <rect key="frame" x="65" y="0.0" width="292" height="18.333333333333332"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -48,7 +48,6 @@
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="1o6-ZS-ppU" secondAttribute="trailing" constant="304.66666666666669" id="3OB-Ml-93v"/>
                                         <constraint firstItem="oQE-Yy-Ppl" firstAttribute="trailing" secondItem="eqW-Mv-Hwp" secondAttribute="trailing" id="9QB-Cs-0p7"/>
                                         <constraint firstItem="M0Z-F1-twY" firstAttribute="top" secondItem="oQE-Yy-Ppl" secondAttribute="top" constant="5" id="Br8-5a-qMP"/>
                                         <constraint firstItem="oQE-Yy-Ppl" firstAttribute="leading" secondItem="eqW-Mv-Hwp" secondAttribute="leading" id="CH0-FQ-NQ9"/>
@@ -61,6 +60,7 @@
                                         <constraint firstItem="1o6-ZS-ppU" firstAttribute="leading" secondItem="M0Z-F1-twY" secondAttribute="leading" id="Ud2-PA-NYZ"/>
                                         <constraint firstItem="oQE-Yy-Ppl" firstAttribute="leading" secondItem="M0Z-F1-twY" secondAttribute="trailing" constant="10" id="cew-3x-sB4"/>
                                         <constraint firstItem="M0Z-F1-twY" firstAttribute="top" secondItem="xeq-0A-o9F" secondAttribute="topMargin" constant="-6" id="hyl-eq-Ts9"/>
+                                        <constraint firstItem="oQE-Yy-Ppl" firstAttribute="leading" secondItem="M0Z-F1-twY" secondAttribute="trailing" constant="10" id="i4v-Cs-hK5"/>
                                         <constraint firstItem="1o6-ZS-ppU" firstAttribute="top" secondItem="M0Z-F1-twY" secondAttribute="topMargin" constant="-8" id="oMA-c2-mab"/>
                                         <constraint firstItem="oQE-Yy-Ppl" firstAttribute="leading" secondItem="1o6-ZS-ppU" secondAttribute="trailing" constant="10" id="xGj-Tz-qMn"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="eqW-Mv-Hwp" secondAttribute="bottom" constant="-12.666667938232422" id="xsi-12-X6F"/>
@@ -70,9 +70,9 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="artistName" destination="eqW-Mv-Hwp" id="DLe-tW-lHC"/>
+                                    <outlet property="containerView" destination="1o6-ZS-ppU" id="lVV-Bw-l3c"/>
                                     <outlet property="musicImage" destination="M0Z-F1-twY" id="6sS-Py-aNa"/>
                                     <outlet property="trackName" destination="oQE-Yy-Ppl" id="tgF-mD-7O7"/>
-                                    <segue destination="yMG-53-7dC" kind="show" identifier="SegueForMusicDetails" id="qNH-LM-UY3"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -96,11 +96,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="25j-d5-RUL">
-                                <rect key="frame" x="115" y="203" width="150" height="150"/>
+                                <rect key="frame" x="115" y="159" width="150" height="194"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rl1-uu-jBR">
-                                <rect key="frame" x="115" y="203" width="150" height="150"/>
+                                <rect key="frame" x="115" y="159" width="150" height="194"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKO-n5-Keu">
                                 <rect key="frame" x="60" y="405" width="240" height="35"/>

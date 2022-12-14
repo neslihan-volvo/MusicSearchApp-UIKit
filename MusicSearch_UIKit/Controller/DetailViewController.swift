@@ -23,7 +23,7 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         playButton.setTitle("Play", for: .normal)
         musicImage.image = UIImage(named: "sampleImage100")
-        musicImage.applyShadow(containerView:imageOuterView, coefficient: 0.3)
+        //musicImage.applyShadow(containerView:imageOuterView, coefficient: 0.3)
         
         getMusicITemDetails()
         // Do any additional setup after loading the view.

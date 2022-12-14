@@ -10,7 +10,6 @@ class ImageDownloader {
     }
     
     func getImage(url: String) async throws -> UIImage {
-        
         let (data, response) = try await networkClient.load(path: url)
         guard let httpResponse = response as? HTTPURLResponse, (200..<300).contains(httpResponse.statusCode)
         else {
